@@ -7,8 +7,10 @@
       "backend"
     ],
     "scripts": {
-      "build": "npm install && npm run build --workspace=client",
-      "start": "npm run start --workspace=backend"
+      "build:client": "cd client && npm install && npm run build",
+      "start:client": "cd client && npm start",
+      "start:backend": "cd backend && npm start",
+      "start": "npm run start:backend && npm run start:client"
     }
   }
   
