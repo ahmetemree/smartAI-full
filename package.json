@@ -12,7 +12,10 @@
       "build:backend": "cd backend && npm install",
       "start:backend": "cd backend && npm start",
       "build": "npm run build:client && npm run build:backend",
-      "start": "npm run start:backend && npm run start:client"
+      "start": "concurrently \"npm run start:backend\" \"npm run start:client\""
+    },
+    "dependencies": {
+      "concurrently": "^7.6.0"
     }
   }
   
