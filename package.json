@@ -1,0 +1,14 @@
+{
+    "name": "full-stack-app",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+      "client",
+      "backend"
+    ],
+    "scripts": {
+      "build": "npm install && npm run build --workspace=client",
+      "start": "npm run start --workspace=backend"
+    }
+  }
+  
