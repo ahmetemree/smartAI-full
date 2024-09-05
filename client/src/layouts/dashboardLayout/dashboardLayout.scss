@@ -1,0 +1,55 @@
+.dashboardLayout {
+    display: flex;
+    gap: 50px;
+    padding-top: 20px;
+    height: 100%;
+  
+    .hamburger {
+      display: none;
+      @media screen and (max-width: 750px) {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        position: absolute;
+        top: 100px;
+        left: 20px;
+        z-index: 15; // İçeriğin önünde olması için z-index artırıldı
+        cursor: pointer;
+      }
+    }
+  
+    .menu {
+      flex: 1;
+      transition: transform 0.3s ease;
+      @media screen and (max-width: 750px) {
+        flex: 0;
+        transform: translateX(-100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #12101b;
+        z-index: 10;
+  
+        &.open {
+          transform: translateX(0);
+        }
+      }
+    }
+  
+    .content {
+      flex: 4;
+      background-color: #12101b;
+      transition: margin-left 0.3s ease;
+      @media screen and (max-width: 750px) {
+        margin-left: 0;
+        &.shifted {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  
